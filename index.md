@@ -35,7 +35,9 @@ Please use this to share any resources you find useful.
 ## To-Do
 
 * make each step a separate git-branch
+* explain examples
 * write a short intro-presentation
+* upgrade to backbone 0.9.9
 
 ## Disclaimer
 This is *one way* to use Bakcbone.js as basis for an MVC application,
@@ -55,5 +57,5 @@ for the excellent [TodoMVC](http://todomvc.com/) project.
 After I made this, I found Osmani also has made some backbone-koans
 that you should probably [check out](https://github.com/addyosmani/backbone-koans-qunit).
 
-Feel free to [fork this project on github](https://github.com/kjarnet/moviestack-frontend).
+Feel free to [fork this project on github](https://github.com/kjarnet/backbone-koans).
 
