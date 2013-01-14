@@ -1,10 +1,9 @@
-/*global describe:false beforeEach:false it:false expect:false Moviestack:false Store:false _:false */
-(function(Moviestack, describe, beforeEach, it, expect, _, Store) {
+/*global describe:false beforeEach:false it:false expect:false Moviestack:false _:false */
+(function(Moviestack, describe, beforeEach, it, expect, _) {
   "use strict";
 
   describe('View: HeaderView', function() {
 
-    var store = new Store('moviestack-test');
     var fixture;
     var view, movies;
 
@@ -17,7 +16,7 @@
         {title: "movie 4", watched: true,  order: 4},
         {title: "movie 5", watched: false, order: 5},
         {title: "movie 6", watched: false, order: 6}
-      ], {localStorage: store});
+      ], {localStorage: {}});
       view = new Moviestack.HeaderView({
         el: fixture,
         collection: movies
@@ -65,5 +64,5 @@
 
   });
 
-})(Moviestack, describe, beforeEach, it, expect, _, Store);
+})(Moviestack, describe, beforeEach, it, expect, _);
 

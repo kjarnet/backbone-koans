@@ -1,14 +1,13 @@
-/*global describe:false beforeEach:false it:false expect:false Moviestack:false Store:false */
+/*global describe:false beforeEach:false it:false expect:false Moviestack:false */
 (function(Moviestack, describe, beforeEach, it, expect) {
   "use strict";
 
   describe('Model: Movie', function() {
 
-    var store = new Store('moviestack-test');
     var movie;
 
     beforeEach(function(){
-      movie = new Moviestack.Movie({}, {localStorage: store});
+      movie = new Moviestack.Movie({}, {localStorage: {}});
     });
 
 

@@ -1,10 +1,9 @@
-/*global describe:false beforeEach:false it:false expect:false Moviestack:false _:false Store:false */
-(function(Moviestack, describe, beforeEach, it, expect, _, Store) {
+/*global describe:false beforeEach:false it:false expect:false Moviestack:false _:false */
+(function(Moviestack, describe, beforeEach, it, expect, _) {
   "use strict";
 
   describe('View: MovieListView', function() {
 
-    var store = new Store('moviestack-test');
     var movies, view;
 
     beforeEach(function(){
@@ -15,7 +14,7 @@
         {id: 4, title: "movie 4", watched: true},
         {id: 5, title: "movie 5", watched: false},
         {id: 6, title: "movie 6", watched: false}
-      ], {localStorage: store});
+      ], {localStorage: {}});
       var fixture = $('<div id="main"> <ul id="movie-list"></ul> </div>');
       view = new Moviestack.MovieListView({
         collection: movies,
@@ -80,5 +79,5 @@
 
   });
 
-})(Moviestack, describe, beforeEach, it, expect, _, Store);
+})(Moviestack, describe, beforeEach, it, expect, _);
 

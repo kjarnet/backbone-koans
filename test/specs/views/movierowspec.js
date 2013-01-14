@@ -1,15 +1,14 @@
-/*global describe:false beforeEach:false it:false expect:false Moviestack:false Store:false _:false */
-(function(Moviestack, describe, beforeEach, it, expect, _, Store) {
+/*global describe:false beforeEach:false it:false expect:false Moviestack:false _:false */
+(function(Moviestack, describe, beforeEach, it, expect, _) {
   "use strict";
 
   describe('View: MovieRowView', function() {
 
     var title, movie, view;
-    var store = new Store('moviestack-test');
 
     beforeEach(function(){
       title = "test title";
-      movie = new Moviestack.Movie({title: title}, {localStorage: store});
+      movie = new Moviestack.Movie({title: title}, {localStorage: {}});
       view = new Moviestack.MovieRowView({model: movie}).render();
     });
 
@@ -69,5 +68,5 @@
 
   });
 
-})(Moviestack, describe, beforeEach, it, expect, _, Store);
+})(Moviestack, describe, beforeEach, it, expect, _);
 

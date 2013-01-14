@@ -1,10 +1,9 @@
 /*global describe:false beforeEach:false it:false expect:false Moviestack:false Store:false _:false */
-(function(Moviestack, describe, beforeEach, it, expect, _, Store) {
+(function(Moviestack, describe, beforeEach, it, expect, _) {
   "use strict";
 
   describe("Collection: Movies", function() {
 
-    var store = new Store("moviestack-test");
     var movies;
 
     beforeEach(function(){
@@ -15,7 +14,7 @@
         {title: "movie 4", watched: true},
         {title: "movie 5", watched: false},
         {title: "movie 6", watched: false}
-      ], {localStorage: store});
+      ], {localStorage: {}});
     });
 
 
@@ -40,5 +39,5 @@
 
   });
 
-})(Moviestack, describe, beforeEach, it, expect, _, Store);
+})(Moviestack, describe, beforeEach, it, expect, _);
 
