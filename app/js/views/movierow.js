@@ -1,4 +1,4 @@
-/*global Mustache:false Backbone:false _:false*/
+/*global $:false Mustache:false Backbone:false _:false*/
 
 /**
  * View: MovieRowView
@@ -33,6 +33,7 @@ var Moviestack = (function(Moviestack) {
     initialize: function() {
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
+      this.listenTo(this.model, 'visible', this.updateFilter);
     },
 
     // Re-render the titles of the movie item.
@@ -42,16 +43,22 @@ var Moviestack = (function(Moviestack) {
       );
       this.$el.toggleClass( 'completed', this.model.get('watched') );
 
+      this.updateFilter(this.filter);
       this.$input = this.$('.edit');
       return this;
     },
 
     updateFilter : function (filter) {
-
+      this.filter = filter;
+      this.$el.toggleClass( 'hidden',  this.isHidden(filter));
     },
 
     isHidden : function (filter) {
-
+      var isCompleted = this.model.get('watched');
+      return ( // hidden cases only
+        (!isCompleted && filter === 'watched') ||
+          (isCompleted && filter === 'unwatched')
+        );
     },
 
     // Toggle the "completed" state of the model.
