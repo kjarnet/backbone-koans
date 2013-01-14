@@ -46,7 +46,7 @@
     });
 
     // Asynchronous test
-    it.skip("should propagate 'filter' events from it's collection down to all models in the collection (in the form of 'visible' events to prevent bubble-loop).", function(done){
+    it("should propagate 'filter' events from it's collection down to all models in the collection (in the form of 'visible' events to prevent bubble-loop).", function(done){
       var newFilter = "test";
       movies.get(5).on("visible", function(filter){
         expect(filter).to.equal(newFilter);

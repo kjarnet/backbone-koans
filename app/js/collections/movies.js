@@ -49,8 +49,10 @@ var Moviestack = (function(Moviestack) {
     activeFilter: null,
 
     setFilter: function(value){
-      this.activeFilter = value;
-      // TODO: Implement this.
+      if(this.activeFilter !== value){
+        this.activeFilter = value;
+        this.trigger("change:filter", value);
+      }
     },
 
     getFilter: function(){
