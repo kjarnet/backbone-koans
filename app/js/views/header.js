@@ -11,6 +11,7 @@ var Moviestack = (function(Moviestack, $) {
 
     // Delegated events for creating new items
     events: {
+      'keypress #new-movie': 'createOnEnter',
       'click #toggle-all': 'toggleAllWathced'
     },
 
@@ -32,13 +33,21 @@ var Moviestack = (function(Moviestack, $) {
 
     // Generate the attributes for a new Movie item.
     newAttributes: function() {
-      // TODO: Implement this.
+      return {
+        title: this.$input.val().trim(),
+        order: this.collection.nextOrder(),
+        watched: false
+      };
     },
 
     // If you hit return in the main input field, create new **Movie** model,
     // persisting it to *localStorage*.
     createOnEnter: function( e ) {
-      // TODO: Implement this.
+      if ( e.which !== Moviestack.ENTER_KEY || !this.$input.val().trim() ) {
+        return;
+      }
+      this.collection.create( this.newAttributes() );
+      this.$input.val('');
     },
 
     toggleAllWathced: function() {

@@ -85,7 +85,7 @@
       expect(movies.getFilter()).to.equal(null);
     });
 
-    it.skip("should destroy all watched movies on clicking the clear-watched link.", function(){
+    it("should destroy all watched movies on clicking the clear-watched link.", function(){
       expect(movies.length).to.equal(6);
       view.$("#clear-watched").trigger(jQuery.Event("click"));
       expect(movies.length).to.equal(4);
