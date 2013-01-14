@@ -43,7 +43,7 @@
 
     });
 
-    describe.skip("Add New Movie Input-field", function(){
+    describe("Add New Movie Input-field", function(){
 
       it("should give the name of the new movie.", function() {
         var newTitle = "New movie";

@@ -11,19 +11,22 @@ var Moviestack = (function(Moviestack, $) {
 
     // Delegated events for creating new items
     events: {
+      'click #toggle-all': 'toggleAllWathced'
     },
 
     // At initialization we bind to the relevant events on the Movies
     // collection, when items are added or changed. Kick things off by
     // loading any preexisting movies that might be saved in *localStorage*.
     initialize: function() {
-      // TODO: Implement this.
+      this.listenTo(this.collection, "all", this.render);
     },
 
     // Re-rendering the App just means refreshing the statistics -- the rest
     // of the app doesn't change.
     render: function() {
-      // TODO: Implement this.
+      this.$input = this.$('#new-movie');
+      this.$allCheckbox = this.$('#toggle-all');
+      this.$allCheckbox.prop("checked", !this.collection.unwatched().length);
       return this;
     },
 
@@ -39,7 +42,12 @@ var Moviestack = (function(Moviestack, $) {
     },
 
     toggleAllWathced: function() {
-      // TODO: Implement this.
+      var watched = this.$allCheckbox.prop("checked");
+      this.collection.each(function( movie ) {
+        movie.save({
+          'watched': watched
+        });
+      });
     }
   });
 
