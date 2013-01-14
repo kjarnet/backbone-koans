@@ -20,7 +20,8 @@ var Moviestack = (function(Moviestack) {
 
     // The DOM events specific to an item.
     events: {
-      'click .toggle':	'togglecompleted'
+      'click .toggle':	'togglecompleted',
+      'click .destroy':	'clear'
     },
 
     // The MovieRowView listens for changes to its model, re-rendering. Since there's
@@ -71,7 +72,7 @@ var Moviestack = (function(Moviestack) {
 
     // Remove the item, destroy the model from *localStorage* and delete its view.
     clear: function() {
-      // TODO: Implement this.
+      this.model.destroy();
     }
   });
 

@@ -39,7 +39,7 @@
 
     // Note: base.css has rules to hide child-elements with class 'view'
     // when the li-element has class 'editing'.
-    it.skip("should add class 'editing' (indicating edit-mode) to it's element when double-clicked.", function(){
+    it("should add class 'editing' (indicating edit-mode) to it's element when double-clicked.", function(){
       expect(view.$el.hasClass("editing")).to.be.false;
       view.$(".title").trigger("dblclick");
       expect(view.$el.hasClass("editing")).to.be.true;
