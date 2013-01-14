@@ -18,7 +18,7 @@
     });
 
 
-    it.skip("should return all watched movies.", function() {
+    it("should return all watched movies.", function() {
       var titles = _(movies.watched()).map(function(m){return m.get("title");});
       expect(titles).to.deep.equal(["movie 2", "movie 4"]);
     });

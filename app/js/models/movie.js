@@ -28,7 +28,10 @@ var Moviestack = (function(Moviestack) {
 
     // Toggle the `watched` state of this movie item.
     toggle: function() {
-      // TODO: Implement this.
+      this.save({
+        watched: !this.get('watched')
+      });
+      return this;
     }
 
   });
