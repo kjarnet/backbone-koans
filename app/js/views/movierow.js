@@ -20,6 +20,7 @@ var Moviestack = (function(Moviestack) {
 
     // The DOM events specific to an item.
     events: {
+      'click .toggle':	'togglecompleted'
     },
 
     // The MovieRowView listens for changes to its model, re-rendering. Since there's
@@ -48,9 +49,9 @@ var Moviestack = (function(Moviestack) {
 
     },
 
-    // Toggle the "watched" state of the model.
+    // Toggle the "completed" state of the model.
     togglecompleted: function() {
-      // TODO: Implement this
+      this.model.toggle();
     },
 
     // Switch this view into "editing" mode, displaying the input field.

@@ -32,7 +32,7 @@
     });
 
     // Asynchronous test
-    it.skip("should destroy it's model on clicking the delete-button.", function(done){
+    it("should destroy it's model on clicking the delete-button.", function(done){
       movie.on("destroy", function(){done();});
       view.$(".destroy").trigger("click");
     });
