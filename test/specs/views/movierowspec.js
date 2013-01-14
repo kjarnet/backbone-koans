@@ -13,7 +13,7 @@
     });
 
 
-    it.skip('should render a simple movie', function() {
+    it('should render a simple movie', function() {
       var expectedOutput = '<div class="title">'+ title + '</div>';
       expect(view.$el.html()).to.contain(expectedOutput);
     });

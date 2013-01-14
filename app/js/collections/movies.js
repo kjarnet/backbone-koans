@@ -29,7 +29,7 @@ var Moviestack = (function(Moviestack) {
 
     // Filter down the list to only movies that are still not watched.
     unwatched: function() {
-      // TODO: Implement this.
+      return this.without.apply( this, this.watched() );
     },
 
     // We keep the Movies in sequential order, despite being saved by unordered
