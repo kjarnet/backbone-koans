@@ -16,11 +16,12 @@ var Moviestack = (function(Moviestack, $, Backbone) {
     // At initialization we bind to the relevant events on the `Todos`
     // collection, when items are added or changed.
     initialize: function() {
-      // TODO: Implement this.
+      this.listenTo(this.collection, "reset", this.render);
     },
 
     render: function() {
-      // TODO: Implement this.
+      this.$("#movie-list").html('');
+      this.addAll();
       return this;
     },
 
@@ -29,12 +30,13 @@ var Moviestack = (function(Moviestack, $, Backbone) {
     // Add a single movie item to the list by creating a view for it, and
     // appending its element to the `<ul>`.
     addOne: function( movie ) {
-      // TODO: Implement this.
+      var view = new Moviestack.MovieRowView({ model: movie });
+      this.$("#movie-list").append( view.render().el );
     },
 
     // Add all items in the collection at once.
     addAll: function() {
-      // TODO: Implement this.
+      this.collection.each(this.addOne, this);
     },
 
     filterOne : function (movie) {

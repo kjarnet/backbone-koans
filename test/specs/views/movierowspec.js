@@ -18,7 +18,7 @@
       expect(view.$el.html()).to.contain(expectedOutput);
     });
 
-    it.skip("should update when it's model changes", function(){
+    it("should update when it's model changes", function(){
       var newTitle = "new title";
       movie.set("title", newTitle);
       var expectedOutput = '<div class="title">'+ newTitle + '</div>';
