@@ -30,7 +30,12 @@ var Moviestack = (function(Moviestack) {
 
     // Re-render the titles of the movie item.
     render: function() {
-      // TODO: Implement this.
+      this.$el.html(
+        Mustache.render(this.template, this.model.toJSON() )
+      );
+      this.$el.toggleClass( 'completed', this.model.get('watched') );
+
+      this.$input = this.$('.edit');
       return this;
     },
 

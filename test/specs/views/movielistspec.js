@@ -23,7 +23,7 @@
     });
 
 
-    it.skip('should render a simple list.', function() {
+    it('should render a simple list.', function() {
       var rows = view.$(".movie-row");
       expect(rows.size()).to.equal(6);
     });
