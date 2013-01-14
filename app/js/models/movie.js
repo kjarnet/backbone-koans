@@ -14,7 +14,10 @@ var Moviestack = (function(Moviestack) {
     // Default attributes for the movie
     // and ensure that each movie created has `title` and `watched` keys.
     defaults: function(){
-      // TODO: Implement this.
+      return {
+        title: '',
+        watched: false
+      }
     },
 
     initialize: function(attribs, options) {

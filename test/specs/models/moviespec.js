@@ -15,7 +15,7 @@
       expect(movie.toJSON()).to.deep.equal({title: '', watched: false});
     });
 
-    it.skip("can toggle it's 'watched' status", function(){
+    it("can toggle it's 'watched' status", function(){
       expect(movie.get('watched')).to.be.false;
       movie.toggle();
       expect(movie.get('watched')).to.be.true;
