@@ -28,7 +28,7 @@
       expect(rows.size()).to.equal(6);
     });
 
-    it.skip("should update when a model is added.", function(){
+    it("should update when a model is added.", function(){
       var rows = view.$(".movie-row");
       expect(rows.size()).to.equal(6);
       movies.create({title: "movie 6", watched: true});

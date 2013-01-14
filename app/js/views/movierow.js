@@ -22,7 +22,9 @@ var Moviestack = (function(Moviestack) {
     events: {
       'click .toggle':	'togglecompleted',
       'dblclick .title': 'edit',
-      'click .destroy':	'clear'
+      'click .destroy':	'clear',
+      'keypress .edit':	'updateOnEnter',
+      'blur .edit':		'close'
     },
 
     // The MovieRowView listens for changes to its model, re-rendering. Since there's
@@ -64,12 +66,22 @@ var Moviestack = (function(Moviestack) {
 
     // Close the "editing" mode, saving changes to the movie.
     close: function() {
-      // TODO: Implement this.
+      var value = this.$input.val().trim();
+
+      if ( value ) {
+        this.model.save({ title: value });
+      } else {
+        this.clear();
+      }
+
+      this.$el.removeClass('editing');
     },
 
     // If you hit 'enter', we're through editing the item.
     updateOnEnter: function( e ) {
-      // TODO: Implement this.
+      if ( e.which === Moviestack.ENTER_KEY ) {
+        this.close();
+      }
     },
 
     // Remove the item, destroy the model from *localStorage* and delete its view.
