@@ -1,4 +1,5 @@
-backbone-koans
+Backbone Koans
 ==============
 
-Yet another koans-for-learning-backbone.js-project
+Yet another koans-for-learning-backbone.js-project.
+

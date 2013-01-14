@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="lib/mocha-1.7.3/mocha.css">
+  </head>
+  <body>
+
+    <!-- Templates -->
+    <script type="text/template" id="item-template">
+      <div class="view clearfix">
+        <div class="watched"><input class="toggle" type="checkbox" {{#watched}}'checked'{{/watched}} ></div>
+        <div class="title">{{title}}</div>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="{{title}}">
+    </script>
+
+    <script type="text/template" id="stats-template">
+        <span id="movie-count">
+          <strong>{{unwatched}}</strong>
+          {{^plural}}movie{{/plural}}
+          {{#plural}}movies{{/plural}}
+          left to watch
+        </span>
+      <ul id="filters">
+        <li>
+          <a class="selected" id="filter-all" href="#">All</a>
+        </li>
+        <li>
+          <a href="#" id="filter-unwatched">Unwatched</a>
+        </li>
+        <li>
+          <a href="#" id="filter-watched">Watched</a>
+        </li>
+      </ul>
+      {{#watched}}
+      <button id="clear-watched">Clear watched ({{watched}})</button>
+      {{/watched}}
+    </script>
+
+    <div id="mocha"></div>
+    <script src="lib/mocha-1.7.3/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <!-- assertion framework -->
+
+    <script src="lib/chai.js"></script>
+
+
+    <script>expect = chai.expect</script>
+
+    <!-- include source files here... -->
+
+    <script src="../app/js/lib/jquery.min.js"></script>
+    <script src="../app/js/lib/lodash.js"></script>
+    <script src="../app/js/lib/backbone.js"></script>
+    <script src="../app/js/lib/backbone-localstorage.js"></script>
+    <script src="../app/js/lib/mustache.js"></script>
+    <script src="../app/js/globals.js"></script>
+    <script src="../app/js/models/movie.js"></script>
+    <script src="../app/js/collections/movies.js"></script>
+    <script src="../app/js/views/movierow.js"></script>
+    <script src="../app/js/views/movielist.js"></script>
+    <script src="../app/js/views/header.js"></script>
+    <script src="../app/js/views/footer.js"></script>
+    <script src="../app/js/views/app.js"></script>
+
+    <!-- include spec files here... -->
+    <script src="specs/models/moviespec.js"></script>
+    <script src="specs/collections/moviesspec.js"></script>
+    <script src="specs/views/movierowspec.js"></script>
+    <script src="specs/views/movielistspec.js"></script>
+    <script src="specs/views/headerspec.js"></script>
+    <script src="specs/views/footerspec.js"></script>
+
+    <!-- trigger the mocha runner -->
+    <script src="runner/mocha.js"></script>
+
+  </body>
+</html>

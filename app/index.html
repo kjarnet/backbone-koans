@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Moviestack</title>
+    <link rel="stylesheet" href="styles/base.css">
+<!--[if IE]>
+    <style type="text/css">
+      .clearfix {
+        zoom: 1;     /* triggers hasLayout */
+        }  /* Only IE can see inside the conditional comment and read this CSS rule. Don't ever use a normal HTML comment inside the CC or it will close prematurely. */
+    </style>
+    <script src="js/lib/ie.js"></script>
+<![endif]-->
+  </head>
+  <body>
+    <section id="movieapp">
+      <h1>movies</h1>
+      <header id="header">
+        <input id="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as watched</label>
+        <input id="new-movie" placeholder="Add new movie (enter to save)" autofocus>
+      </header>
+      <section id="main">
+        <ul id="movie-list"></ul>
+      </section>
+      <footer id="footer"></footer>
+    </section>
+    <div id="info">
+      <p>Double-click to edit a movie</p>
+      <p>Shamelessly ripped from <a href="https://github.com/addyosmani">Addy Osmani</a>'s <a href="http://todomvc.com">TodoMVC</a> project.</p>
+    </div>
+
+    <!-- Templates -->
+    <script type="text/template" id="item-template">
+      <div class="view clearfix">
+        <div class="watched"><input class="toggle" type="checkbox" {{#watched}}'checked'{{/watched}} ></div>
+        <div class="title">{{title}}</div>
+        <button class="destroy"></button>
+      </div>
+      <input class="edit" value="{{title}}">
+    </script>
+
+    <script type="text/template" id="stats-template">
+        <span id="movie-count">
+          <strong>{{unwatched}}</strong>
+          {{^plural}}movie{{/plural}}
+          {{#plural}}movies{{/plural}}
+          left to watch
+        </span>
+      <ul id="filters">
+        <li>
+          <a class="selected" id="filter-all" href="#">All</a>
+        </li>
+        <li>
+          <a href="#" id="filter-unwatched">Unwatched</a>
+        </li>
+        <li>
+          <a href="#" id="filter-watched">Watched</a>
+        </li>
+      </ul>
+      {{#watched}}
+      <button id="clear-watched">Clear watched ({{watched}})</button>
+      {{/watched}}
+    </script>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/lodash.js"></script>
+    <script src="js/lib/backbone.js"></script>
+    <script src="js/lib/backbone-localstorage.js"></script>
+    <script src="js/lib/mustache.js"></script>
+    <script src="js/globals.js"></script>
+    <script src="js/models/movie.js"></script>
+    <script src="js/collections/movies.js"></script>
+    <script src="js/views/movierow.js"></script>
+    <script src="js/views/movielist.js"></script>
+    <script src="js/views/header.js"></script>
+    <script src="js/views/footer.js"></script>
+    <script src="js/views/app.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
