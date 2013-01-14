@@ -21,6 +21,7 @@ var Moviestack = (function(Moviestack) {
     // The DOM events specific to an item.
     events: {
       'click .toggle':	'togglecompleted',
+      'dblclick .title': 'edit',
       'click .destroy':	'clear'
     },
 
@@ -57,7 +58,8 @@ var Moviestack = (function(Moviestack) {
 
     // Switch this view into "editing" mode, displaying the input field.
     edit: function() {
-      // TODO: Implement this.
+      this.$el.addClass('editing');
+      this.$input.focus();
     },
 
     // Close the "editing" mode, saving changes to the movie.

@@ -47,7 +47,7 @@
 
     // Note: base.css has rules to hide child-elements with class 'edit'
     // when the li-element doesn't have the class 'editing'.
-    it.skip("should remove class 'editing' (indicating view-mode) and save it's model when enter is pressed.", function(){
+    it("should remove class 'editing' (indicating view-mode) and save it's model when enter is pressed.", function(){
       var newTitle = "New Title";
       view.$(".title").trigger("dblclick");
       expect(view.$el.hasClass("editing")).to.be.true;
