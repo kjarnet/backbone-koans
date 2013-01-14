@@ -22,7 +22,9 @@ var Moviestack = (function(Moviestack) {
 
     // Filter down the list of all movie items that are watched.
     watched: function() {
-      // TODO: Implement this.
+      return this.filter(function( movie ) {
+        return movie.get('watched');
+      });
     },
 
     // Filter down the list to only movies that are still not watched.

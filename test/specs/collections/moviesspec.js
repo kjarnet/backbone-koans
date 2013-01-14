@@ -23,7 +23,7 @@
       expect(titles).to.deep.equal(["movie 2", "movie 4"]);
     });
 
-    it.skip("should return all unwatched movies.", function() {
+    it("should return all unwatched movies.", function() {
       var titles = _(movies.unwatched()).map(function(m){return m.get("title");});
       expect(titles).to.deep.equal(["movie 1", "movie 3", "movie 5", "movie 6"]);
     });
