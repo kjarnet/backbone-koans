@@ -17,6 +17,7 @@ var Moviestack = (function(Moviestack, $, Backbone) {
     // collection, when items are added or changed.
     initialize: function() {
       this.listenTo(this.collection, "reset", this.render);
+      this.listenTo(this.collection, "add", this.addOne);
     },
 
     render: function() {

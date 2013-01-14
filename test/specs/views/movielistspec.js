@@ -37,7 +37,7 @@
     });
 
     // Actually best implemented in MovieRowView!
-    it.skip("should update when a model is removed.", function(){
+    it("should update when a model is removed.", function(){
       var rows = view.$(".movie-row");
       expect(rows.size()).to.equal(6);
       movies.get(2).destroy();
