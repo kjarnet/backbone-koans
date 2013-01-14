@@ -13,6 +13,7 @@ var Moviestack = (function(Moviestack, $) {
     template: $('#stats-template').html(),
 
     events: {
+      "click #clear-watched": "clearCompleted",
       "click #filter-all": function(e){this.setFilter(null, e);},
       "click #filter-watched": function(e){this.setFilter("watched", e);},
       "click #filter-unwatched": function(e){this.setFilter("unwatched", e);}
@@ -54,7 +55,10 @@ var Moviestack = (function(Moviestack, $) {
 
     // Clear all completed movie items, destroying their models.
     clearCompleted: function(e) {
-      // TODO: Implement this.
+      _(this.collection.watched()).each(function( movie ) {
+        movie.destroy();
+      });
+      e.preventDefault();
     }
 
   });

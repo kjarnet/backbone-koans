@@ -29,7 +29,7 @@
     });
 
     // Asynchronous test
-    it.skip("should trigger a 'filter' event when filter is updated.", function(done){
+    it("should trigger a 'filter' event when filter is updated.", function(done){
       movies.on("change:filter", function(newFilter){
         expect(newFilter).to.equal("watched");
         done();
