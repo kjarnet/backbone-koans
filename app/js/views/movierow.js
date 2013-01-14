@@ -32,6 +32,7 @@ var Moviestack = (function(Moviestack) {
     // app, we set a direct reference on the model for convenience.
     initialize: function() {
       this.listenTo(this.model, 'change', this.render);
+      this.listenTo(this.model, 'destroy', this.remove);
     },
 
     // Re-render the titles of the movie item.

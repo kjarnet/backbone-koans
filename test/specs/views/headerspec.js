@@ -23,7 +23,7 @@
       }).render();
     });
 
-    describe.skip("Toggle All Checkbox", function(){
+    describe("Toggle All Checkbox", function(){
 
       it("should toggle the 'watched' state of all the movies in the view's collection.", function() {
         expect(movies.pluck("watched")).to.deep.equal([false, true, false, true, false, false]);
