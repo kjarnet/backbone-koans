@@ -25,7 +25,7 @@
       expect(view.$el.html()).to.contain(expectedOutput);
     });
 
-    it.skip("should toggle 'watched' status when clicking the checkbox.", function(){
+    it("should toggle 'watched' status when clicking the checkbox.", function(){
       expect(movie.get("watched")).to.be.false;
       view.$(".toggle").trigger("click");
       expect(movie.get("watched")).to.be.true;

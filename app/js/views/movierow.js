@@ -26,6 +26,7 @@ var Moviestack = (function(Moviestack) {
     // a one-to-one correspondence between a **Movie** and a **MovieRowView** in this
     // app, we set a direct reference on the model for convenience.
     initialize: function() {
+      this.listenTo(this.model, 'change', this.render);
     },
 
     // Re-render the titles of the movie item.
