@@ -18,6 +18,9 @@ var Moviestack = (function(Moviestack, $, Backbone) {
     initialize: function() {
       this.listenTo(this.collection, "reset", this.render);
       this.listenTo(this.collection, "add", this.addOne);
+      this.listenTo(this.collection, "add", this.filterOne, this );
+      this.listenTo(this.collection, "change:watched", this.filterOne);
+      this.listenTo(this.collection, "change:filter", this.onChangeFilter);
     },
 
     render: function() {
@@ -41,11 +44,12 @@ var Moviestack = (function(Moviestack, $, Backbone) {
     },
 
     filterOne : function (movie) {
-      // TODO: Implement this.
+      movie.trigger("visible", this.filter);
     },
 
     onChangeFilter : function (newFilter) {
-      // TODO: Implement this.
+      this.filter = newFilter;
+      this.collection.each(this.filterOne, this);
     }
 
 

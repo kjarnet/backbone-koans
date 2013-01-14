@@ -58,7 +58,7 @@
       expect(view.model.get("title")).to.equal(newTitle);
     });
 
-    it.skip("should toggle class 'hidden' on 'visible'-events on it's model, depending on whether it is mathced by the passed filter.", function(){
+    it("should toggle class 'hidden' on 'visible'-events on it's model, depending on whether it is mathced by the passed filter.", function(){
       expect(view.$el.hasClass("hidden")).to.be.false;
       movie.trigger("visible", "watched");
       expect(view.$el.hasClass("hidden")).to.be.true;

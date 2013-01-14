@@ -56,7 +56,7 @@
     });
 
     // Note: A 'hidden' class is included in base.css and is to be used to hide filtered elements.
-    it.skip("should hide unwatched movies when filter is set to 'watched'.", function(){
+    it("should hide unwatched movies when filter is set to 'watched'.", function(){
       view.$(".movie-row").each(function(el){
         expect($(el).hasClass("hidden")).to.be.false;
       });
@@ -67,7 +67,7 @@
     });
 
     // Note: A 'hidden' class is included in base.css and is to be used to hide filtered elements.
-    it.skip("should hide watched movies when filter is set to 'unwatched'.", function(){
+    it("should hide watched movies when filter is set to 'unwatched'.", function(){
       view.$(".movie-row").each(function(el){
         expect($(el).hasClass("hidden")).to.be.false;
       });
