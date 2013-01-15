@@ -13,7 +13,7 @@ var Moviestack = (function(Moviestack, $) {
   Moviestack.AppView = Backbone.View.extend({
 
     initialize: function() {
-      var store = new Store("moviestack");
+      var store = new Backbone.LocalStorage("moviestack");
       this.movies = new Moviestack.Movies([], {localStorage: store});
       this.movies.fetch();
 
