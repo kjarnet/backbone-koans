@@ -11,7 +11,7 @@ To get started clone the git-repo and checkout the commit tagged "start".
     $ git clone git://github.com/kjarnet/backbone-koans.git
     $ git checkout start
 
-Then do the tasks in [tasks.html](/moviestack-frontend/tasks.html).
+Then do the tasks in [tasks.html](/backbone-koans/tasks.html).
 
 ## Resources
 Some resources to get you started:
@@ -30,7 +30,7 @@ This is *one way* to use Bakcbone.js as basis for an MVC application,
 and certainly not "the best way".
 If you find any bugs or possible improvements
 please contact me by gmail (kjarnet) or submit 
-an [issue](https://github.com/kjarnet/moviestack-frontend/issues) 
+an [issue](https://github.com/kjarnet/backbone-koans/issues) 
 or [pull-request](https://help.github.com/articles/using-pull-requests).
 In this workshop I completely ignore Backbone's 
 [Router](http://backbonejs.org/#Router) and [History](http://backbonejs.org/#History) components
