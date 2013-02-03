@@ -6,11 +6,11 @@ tagline: Yet another project with koans for learning Backbone.js
 {% include JB/setup %}
 
 This site is part of a workshop meant as a intro/tutorial in [Backbone.js](http://backbonejs.org/).
-To get started clone the git-repo and switch to the workshop2 branch.
+To get started clone the git-repo and checkout the commit tagged "start".
 
-    $ git clone git://github.com/kjarnet/moviestack-frontend.github
-    $ git checkout workshop2
-    
+    $ git clone git://github.com/kjarnet/backbone-koans.git
+    $ git checkout start
+
 and start with the tasks in [tasks.html](/moviestack-frontend/tasks.html).
 
 ## Resources
@@ -23,7 +23,7 @@ Some resources to get you started:
 
 There's also an internal site on Confluence -> Learn.JS -> Tema 4 - Backbone.
 Please use this to share any resources you find useful.
-    
+
 ## Blog posts
 
 <ul class="posts">
