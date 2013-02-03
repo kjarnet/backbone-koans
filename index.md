@@ -11,10 +11,11 @@ To get started clone the git-repo and checkout the commit tagged "start".
     $ git clone git://github.com/kjarnet/backbone-koans.git
     $ git checkout start
 
-and start with the tasks in [tasks.html](/moviestack-frontend/tasks.html).
+Then do the tasks in [tasks.html](/moviestack-frontend/tasks.html).
 
 ## Resources
-Some resources to get you started: 
+Some resources to get you started:
+
 * MVC: <http://addyosmani.com/blog/digesting-javascript-mvc-pattern-abuse-or-evolution/>
 * Javascript: <http://bonsaiden.github.com/JavaScript-Garden/>
 * Modules: <http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth>
@@ -23,21 +24,6 @@ Some resources to get you started:
 
 There's also an internal site on Confluence -> Learn.JS -> Tema 4 - Backbone.
 Please use this to share any resources you find useful.
-
-## Blog posts
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-* make each step a separate git-branch
-* explain examples
-* write a short intro-presentation
-* upgrade to backbone 0.9.9
 
 ## Disclaimer
 This is *one way* to use Bakcbone.js as basis for an MVC application,

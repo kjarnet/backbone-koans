@@ -2,6 +2,7 @@
 layout: page
 title: "Koans"
 description: "The Koans for you to solve"
+group: navigation
 ---
 {% include JB/setup %}
 
