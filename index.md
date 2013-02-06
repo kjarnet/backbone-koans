@@ -11,7 +11,7 @@ To get started clone the git-repo and checkout the commit tagged "start".
     $ git clone git://github.com/kjarnet/backbone-koans.git
     $ git checkout start
 
-Then do the tasks in [tasks.html](/backbone-koans/tasks.html).
+Then do the tasks in [tasks.html]({{ BASE_PATH }}/tasks.html).
 
 ## Resources
 Some resources to get you started:
