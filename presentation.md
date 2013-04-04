@@ -112,11 +112,14 @@ filterView.render(); movieListView.render();</code></pre>
 <section>
   <section>
 ## Backbone.View
+
+* dom
+
   </section>
   <section>
 ## Backbone.View - communication between views
 
-decouple views by communicating via events:
+Decouple views by communicating via events:
 
 <pre><code class="javascript">var SimpleModel = Backbone.Model.extend( {
     defaults: function () { return { "name": "Nothing here yet" }; }
