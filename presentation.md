@@ -56,10 +56,7 @@ What Backbone isn't:
 
 ![Backbone diagram](assets/img/backbone_mvc.png)
 
-([image link](http://i.imgur.com/gi01D5w.png))
-
-
-\*) "Me as a bird"
+\*)As I understand it.
   </section>
 
   <section>
