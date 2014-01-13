@@ -54,7 +54,7 @@ What Backbone isn't:
   <section>
 ## Birdsview of Backbone*
 
-![Backbone diagram](/backbone_mvc.png)
+![Backbone diagram](assets/img/backbone_mvc.png)
 
 ([image link](http://i.imgur.com/gi01D5w.png))
 

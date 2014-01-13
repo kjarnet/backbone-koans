@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
+# auto: true Run jekyll with option -w/--watch instead.
 pygments: true
 markdown: redcarpet
 
@@ -84,7 +84,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : kjarnet
     livefyre :
       site_id : 123
     intensedebate :
